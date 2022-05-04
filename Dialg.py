@@ -292,7 +292,9 @@ class Dialg(wx.Dialog):
         
         btn6=wx.Button(self.panel,-1,'Anuler')
         
-        btn7=wx.Button(self.panel,-1,'Aides')
+        
+        btn7=wx.Button(self.panel,-1,' Aides ')
+        
         
         hbx.Add(self.btn5,0,wx.ALIGN_LEFT)
         
