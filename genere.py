@@ -1,0 +1,100 @@
+import wx
+
+
+class genere(wx.Dialog):
+    def __init__(self,parant,titre):
+        wx.Dialog.__init__(self,parant,-1,titre,size=(480,400))
+        vbxP=wx.BoxSizer(wx.VERTICAL)
+        hbx1=wx.BoxSizer(wx.HORIZONTAL)
+        stc=wx.StaticText(self,-1,'Ajout le Rapport au fichier')
+        btn=wx.Button(self,-1,'Parcours')
+        hbx1.Add(stc,0,wx.ALIGN_LEFT)
+        hbx1.Add(240,-1)
+        hbx1.Add(btn,0,wx.ALIGN_RIGHT)
+        cbx=wx.ComboBox(self,-1,choices=[])
+        ch1=wx.CheckBox(self,-1,'Envoyer le Rapport a l imprimate')
+        ch2=wx.CheckBox(self,-1,'Envoyer le Rapport papier presse')
+        vbxP.Add(10,10)
+        vbxP.Add(hbx1,0,wx.EXPAND)
+        vbxP.Add(5,5)
+        vbxP.Add(cbx,0,wx.EXPAND)
+        vbxP.Add(10,10)
+        vbxP.Add(ch1,0,wx.EXPAND)
+        vbxP.Add(10,10)
+        vbxP.Add(ch2,0,wx.EXPAND)
+        hbx2=wx.BoxSizer(wx.HORIZONTAL)
+        
+        bx=wx.StaticBox(self,-1,'format de sortie',size=(200,-1))
+        bxx=wx.StaticBoxSizer(bx,wx.VERTICAL)
+        rb=wx.RadioButton(self,-1,'html')
+        rb1=wx.RadioButton(self,-1,'Text unicode')
+        rb2=wx.RadioButton(self,-1,'Texte')
+        bxx.Add(rb,0,wx.EXPAND)
+        bxx.Add(rb1,0,wx.EXPAND)
+        bxx.Add(rb2,0,wx.EXPAND)
+        
+        hbx2.Add(bxx,0,wx.EXPAND)
+        
+        vbx1=wx.BoxSizer(wx.VERTICAL)
+        stc2=wx.StaticText(self,-1,'Trier les fichier par')
+        cbx1=wx.ComboBox(self,-1,choices=[])
+        ch3=wx.CheckBox(self,-1,'Envoyer le Rapport a l imprimate')
+        vbx1.Add(stc2,0,wx.EXPAND)
+        vbx1.Add(10,10)
+        vbx1.Add(cbx1,0,wx.EXPAND)
+        vbx1.Add(10,10)
+        vbx1.Add(ch3,0,wx.EXPAND)
+        hbx2.Add(50,-1)
+        hbx2.Add(vbx1,0,wx.RIGHT)
+        vbxP.Add(10,10)
+        vbxP.Add(hbx2,0,wx.EXPAND)
+        bx1=wx.StaticBox(self,-1,'Inclut le Rapport')
+        bxx1=wx.StaticBoxSizer(bx1,wx.VERTICAL)
+        grid=wx.GridSizer(4,2,5,5)
+        
+        ch4=wx.CheckBox(self,-1,'Archiver')
+        ch5=wx.CheckBox(self,-1,'Fichier habituels')
+        ch6=wx.CheckBox(self,-1,'Nom Archiver')
+        ch7=wx.CheckBox(self,-1,'Information complete')
+        ch8=wx.CheckBox(self,-1,'Taille Fichier')
+        ch9=wx.CheckBox(self,-1,'Taille Compressee')
+        ch10=wx.CheckBox(self,-1,'Date du fichier')
+        ch11=wx.CheckBox(self,-1,'Somme Controle Fichier')
+        
+        
+        grid.Add(ch4,0)
+        grid.Add(ch5,0)
+        grid.Add(ch6,0)
+        grid.Add(ch7,0)
+        grid.Add(ch8,0)
+        grid.Add(ch9,0)
+        grid.Add(ch10,0)
+        grid.Add(ch11,0)
+        
+        bxx1.Add(grid,0,wx.EXPAND)
+        vbxP.Add(10,10)
+        vbxP.Add(bxx1,0,wx.EXPAND)
+        
+        
+        hbx3=wx.BoxSizer(wx.HORIZONTAL)
+        self.btn5=wx.Button(self,-1,'  OK  ')
+        
+        #self.Bind(wx.EVT_BUTTON,self.OnFerme,self.btn5)
+        
+        btn6=wx.Button(self,-1,'Anuler')
+        
+        btn7=wx.Button(self,-1,'Aides')
+        btn8=wx.Button(self,-1,'Enregistrer')
+        hbx3.Add(10,10)
+        hbx3.Add(self.btn5,0,wx.ALIGN_LEFT)
+        hbx3.Add(10,10)
+        hbx3.Add(btn6,0,wx.ALIGN_LEFT)
+        hbx3.Add(10,10)
+        hbx3.Add(btn7,0,wx.ALIGN_RIGHT)
+        hbx3.Add(10,10)
+        hbx3.Add(btn8,0,wx.ALIGN_RIGHT)
+        vbxP.Add(10,10)
+        vbxP.Add(hbx3,0,wx.EXPAND)
+        
+        self.SetSizer(vbxP)
+      
